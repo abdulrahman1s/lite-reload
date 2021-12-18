@@ -78,8 +78,8 @@ class HTTPServer {
     for (const client of this.clients) client.reload()
   }
 
-  listen(port) {
-    return new Promise(ok => this.http.listen(port, ok))
+  listen() {
+    return new Promise(ok => this.http.listen(this.options.port, this.options.host, ok))
   }
 }
 

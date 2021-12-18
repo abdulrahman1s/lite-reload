@@ -23,7 +23,6 @@ const margeDefaultOptions = (options) => Object.assign({
 (async () => {
   const options = margeDefaultOptions(await cli.collect())
   const server = new HTTPServer(options)
-
   const { port, host, dir } = options
 
   server.watch(dir, (state) => {
@@ -33,9 +32,9 @@ const margeDefaultOptions = (options) => Object.assign({
     }
   })
 
-  await server.listen(port)
+  await server.listen()
 
-  console.log(`Server starting at: ${host}:${port}`)
+  console.log(`Server starting at: http://${host}:${port}`)
   console.log('Waiting for changes...\n\n')
 })().catch(err => {
   console.error(err)
