@@ -1,0 +1,37 @@
+{
+  "name": "lite-reload",
+  "version": "1.0.0",
+  "description": "Tiny web server with live reload",
+  "main": "./dist/index.js",
+  "bin": {
+    "lite-reload": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "esbuild ./src --bundle --platform=node --format=cjs --minify --outfile=./dist/lite-reload.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheMaestro1s/lite-reload.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheMaestro1s/lite-reload/issues"
+  },
+  "author": "Abdulrahman Salah",
+  "license": "MIT",
+  "keywords": [
+    "tiny",
+    "server",
+    "live-server",
+    "reload",
+    "serve",
+    "http",
+    "http-server",
+    "zero-dependencies"
+  ],
+  "files": [
+    "dist/*"
+  ],
+  "devDependencies": {
+    "esbuild": "^0.14.5"
+  }
+}
