@@ -6,6 +6,11 @@
 - Live Reload
 - SPA Mode Support (Soon)
 
+## Install
+```bash
+$ npm i -D lite-reload
+```
+
 
 ## Usage
 
