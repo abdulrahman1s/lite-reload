@@ -25,11 +25,9 @@ const margeDefaultOptions = (options) => Object.assign({
   const server = new HTTPServer(options)
   const { port, host, dir } = options
 
-  server.watch(dir, (state) => {
-    if (state === 'change') {
-      server.reload()
-      console.log('File changed')
-    }
+  server.watch(dir).on('change', () => {
+    server.reload()
+    console.log('File changed')
   })
 
   await server.listen()

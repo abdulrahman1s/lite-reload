@@ -1,7 +1,7 @@
 # Lite Reload
 
 ## Features
-- Tiny (~4.2kb)
+- Tiny (~12kb)
 - No dependencies
 - Live Reload
 - SPA Mode Support (Soon)

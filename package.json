@@ -1,13 +1,14 @@
 {
   "name": "lite-reload",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Tiny web server with live reload",
-  "main": "./dist/index.js",
+  "main": "./dist/lite-reload.js",
   "bin": {
-    "lite-reload": "./dist/index.js"
+    "lite-reload": "./dist/lite-reload.js"
   },
   "scripts": {
-    "build": "esbuild ./src --bundle --platform=node --format=cjs --minify --outfile=./dist/lite-reload.js"
+    "build": "esbuild ./src --bundle --platform=node --format=cjs --minify --outfile=./dist/lite-reload.js",
+    "bin": "./dist/lite-reload.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "dist/*"
   ],
   "devDependencies": {
-    "esbuild": "^0.14.5"
+    "esbuild": "^0.14.5",
+    "node-watch": "^0.7.2"
   }
 }

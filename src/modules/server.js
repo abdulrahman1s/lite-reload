@@ -1,6 +1,8 @@
 const http = require('http')
 const path = require('path')
-const { watch, promises: fs } = require('fs')
+const fs = require('fs/promises')
+const watch = require('node-watch');
+
 
 const mime = {
   ".htm": "text/html",
@@ -69,8 +71,11 @@ class HTTPServer {
   }
 
 
-  watch(dir, fn) {
-    return watch(dir, {}, fn)
+  watch(dir) {
+    return watch(dir, {
+      recursive: true,
+      delay: 500
+    })
   }
 
 
